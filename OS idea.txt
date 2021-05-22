@@ -1,0 +1,22 @@
+BOOTLOADER 0x0
+.........
+J 1000  (PC IS 1000)
+
+1000 
+J 1064 (LOCATION OF FIRST PROGRAM)
+
+
+
+
+
+Program code:
+
+GLOBAL _main = J 4 <- ILLEGAL KERNEL ERROR
+
+INSTEAD
+GLOBAL _main = JRL 4
+
+
+0x4 ABS 0x1068: _main:
+	.......
+

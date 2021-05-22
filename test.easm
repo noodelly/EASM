@@ -1,0 +1,11 @@
+;Simple test program that adds two numbers
+
+		.GLOBAL   _main
+		
+		.SECTION  .text
+_main:	
+		MOVI	 $r0, 1
+		MOVI	 $r1, 1
+		ADD		 $acc, $r0, $r1
+		
+		

@@ -1,0 +1,14 @@
+; Program that flashes the STORE register for einfach phonix 2-bit.
+; You may need to lower the clock speed of the CPU in order to see it flash.
+
+		GLOBAL on      ;Define entry point for program
+		
+		SECTION .text
+on:
+		ADDI $R0, 3    ;Lack of support for MOV in 2-bit means we can only add
+		JMP off          ;Turn off to ensure even flashing.
+off:
+		SUBI $R0, 3    ;Ditto here too
+		JMP on		   ;Jump back to on
+		
+		
